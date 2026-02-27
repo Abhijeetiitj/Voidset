@@ -1,0 +1,96 @@
+/* Same Theme As Other Pages */
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: white;
+}
+
+/* Main Section */
+
+.main {
+    text-align: center;
+    padding-top: 80px;
+}
+
+/* Top Bar */
+
+.topbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 60px;
+    position: relative;
+}
+
+.topbar h1 {
+    font-size: 36px;
+}
+
+.topbar button {
+    position: absolute;
+    left: 30px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.topbar button:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Center Card */
+
+.cards {
+    display: flex;
+    justify-content: center;
+}
+
+.floor-card {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    padding: 30px 40px;
+    width: 380px;
+    border-radius: 18px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.floor-card:hover {
+    transform: translateY(-6px);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.floor-info h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.floor-info p {
+    margin-top: 8px;
+    color: #ddd;
+}
+
+.status {
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* Responsive */
+
+@media (max-width: 500px) {
+    .floor-card {
+        width: 90%;
+    }
+}

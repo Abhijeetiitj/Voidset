@@ -1,0 +1,130 @@
+/* Same Theme as style.css */
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: white;
+}
+
+/* Main container */
+.main {
+    text-align: center;
+    padding-top: 60px;
+}
+
+/* Top bar */
+.topbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.topbar h1 {
+    font-size: 36px;
+    letter-spacing: 1px;
+}
+
+.topbar button {
+    position: absolute;
+    left: 30px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.topbar button:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Cards container */
+.cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;   /* 🔥 This adds space between floors */
+}
+
+/* Floor Card */
+.floor-card {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    padding: 25px 35px;
+    width: 340px;
+    border-radius: 18px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.floor-card:hover {
+    transform: translateY(-6px);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+/* Floor Info */
+.floor-info h2 {
+    margin: 0;
+    font-size: 22px;
+}
+
+.floor-info p {
+    margin: 6px 0 0;
+    color: #ddd;
+}
+
+/* Rush Status */
+.status {
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.court-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.court {
+    padding: 20px;
+    border-radius: 15px;
+    cursor: pointer;
+    text-align: center;
+    transition: 0.3s;
+    color: white;
+}
+
+.court:hover {
+    transform: scale(1.05);
+}
+
+/* Status Colors */
+.available {
+    background-color: #2ecc71; /* Green */
+}
+
+.few {
+    background-color: #f1c40f; /* Yellow */
+    color: black;
+}
+
+.full {
+    background-color: #e74c3c; /* Red */
+}
+
+/* Selected Court */
+.selected {
+    border: 4px solid white;
+}
