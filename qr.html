@@ -5,26 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="styleqr.css">
-    <script src="https://cdn.jsdelivr.net/npm/qrcode/build/qrcode.min.js"></script>
+
+    <!-- Stable QR Code Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 </head>
 <body>
 
 <div class="container">
 
     <h1>RushLess</h1>
-    <p class="subtitle">Show this QR at the gate</p>
+    <p class="subtitle">Show this QR at the gate scanner</p>
 
     <div class="info-box">
-        <p>Facility:</p>
+        <p>Facility</p>
         <h2 id="facilityName"></h2>
 
-        <p>Location:</p>
+        <p>Location</p>
         <h2 id="locationName"></h2>
     </div>
 
-    <div class="qr-box">
-        <canvas id="qrcode"></canvas>
-    </div>
+    <div id="qrcode" class="qr-box"></div>
 
     <p class="note">QR valid for this session only</p>
 

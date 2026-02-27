@@ -1,3 +1,4 @@
+// Get selected values
 const facility = localStorage.getItem("facility");
 const location = localStorage.getItem("location");
 
@@ -7,26 +8,27 @@ if (!facility || !location) {
     window.location.href = "index.html";
 }
 
-// Show on screen
+// Display values
 document.getElementById("facilityName").innerText = facility.toUpperCase();
 document.getElementById("locationName").innerText = location.toUpperCase();
 
-// Create unique session
+// Generate unique session ID
 const sessionId = Date.now();
 
-// Structured QR Data
+// Create structured QR data
 const qrData = JSON.stringify({
     facility: facility,
     location: location,
-    session: sessionId
+    session: sessionId,
+    timestamp: new Date().toISOString()
 });
 
+// Clear old QR if exists
+document.getElementById("qrcode").innerHTML = "";
+
 // Generate QR
-QRCode.toCanvas(
-    document.getElementById("qrcode"),
-    qrData,
-    {
-        width: 250,
-        margin: 2
-    }
-);
+new QRCode(document.getElementById("qrcode"), {
+    text: qrData,
+    width: 250,
+    height: 250
+});

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sports Complex - RushLess</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+
+<div class="main">
+
+    <div class="topbar">
+        <button onclick="goBack()">← Back</button>
+        <h1>Sports Complex</h1>
+    </div>
+
+    <div class="cards">
+
+        <div class="floor-card" onclick="selectSport('badminton')">
+            <div class="floor-info">
+                <h2>Badminton</h2>
+                <p><span id="badminton-count">6</span> players</p>
+            </div>
+            <div id="badminton-status" class="status"></div>
+        </div>
+
+        <div class="floor-card" onclick="selectSport('tabletennis')">
+            <div class="floor-info">
+                <h2>Table Tennis</h2>
+                <p><span id="tabletennis-count">3</span> players</p>
+            </div>
+            <div id="tabletennis-status" class="status"></div>
+        </div>
+
+        <div class="floor-card" onclick="selectSport('squash')">
+            <div class="floor-info">
+                <h2>Squash</h2>
+                <p><span id="squash-count">2</span> players</p>
+            </div>
+            <div id="squash-status" class="status"></div>
+        </div>
+
+        <div class="floor-card" onclick="selectSport('gym')">
+            <div class="floor-info">
+                <h2>Gym</h2>
+                <p><span id="gym-count">18</span> people</p>
+            </div>
+            <div id="gym-status" class="status"></div>
+        </div>
+
+        <div class="floor-card" onclick="selectSport('kabbadi')">
+            <div class="floor-info">
+                <h2>Kabbadi</h2>
+                <p><span id="kabbadi-count">10</span> players</p>
+            </div>
+            <div id="kabbadi-status" class="status"></div>
+        </div>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+<script>
+    updateSportsRush();
+</script>
+
+</body>
+</html>
